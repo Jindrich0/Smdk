@@ -4,7 +4,7 @@ function sumTime(string $timeOne, string $timeTwo): string
     $timeOneArray = explode(":", $timeOne);
     $timeTwoArray = explode(":", $timeTwo);
 
-    $sumArray = array();
+    $sumArray = [];
     for ($i = 0; $i < 3; $i++) {
         $sumArray[] = $timeOneArray[$i] + $timeTwoArray[$i];
     }
