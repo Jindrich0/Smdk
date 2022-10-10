@@ -1,5 +1,5 @@
 <?php
-function sumTime(string $timeOne, string $timeTwo) :string
+function sumTime(string $timeOne, string $timeTwo): string
 {
     $timeOneArray = explode(":", $timeOne);
     $timeTwoArray = explode(":", $timeTwo);
