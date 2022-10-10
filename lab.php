@@ -1,7 +1,13 @@
 <?php
-function calculator(string $stroka)
+function calculator(string $line) :int
 {
-    $otvet = eval("return $stroka;");
-    echo $otvet;
+    $arrayError = array("?", "!", "#");
+    foreach ($arrayError as $error) {
+        $findError = strpos($line, $error);
+        if ($findError !== false) {
+            echo "error ";
+        }
 }
-calculator('4/1+2*3');
+    return eval("return (int)$line;");
+}
+echo calculator('4/1+2*3');
