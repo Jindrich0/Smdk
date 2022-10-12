@@ -26,4 +26,4 @@ function sumTime(string $timeOne, string $timeTwo): string
     return $sumArray[0] . ":" . $sumArray[1] . ":" . $sumArray[2];
 }
 
-echo sumTime('20:10:30', '10:20:40');
+echo sumTime('20:10:30', '10:20:50');
