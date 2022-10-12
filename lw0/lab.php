@@ -1,13 +1,14 @@
 <?php
-function calculator(string $line) :int
+function calculator(string $line): int
 {
-    $arrayError = array("?", "!", "#");
+    $arrayError = ["?", "!", "#", ".", ",", "/0"];
     foreach ($arrayError as $error) {
         $findError = strpos($line, $error);
         if ($findError !== false) {
             echo "error ";
         }
+    }
+    return eval("return $line;");
 }
-    return eval("return (int)$line;");
-}
-echo calculator('4/1+2*3');
+
+echo calculator('1+1');
