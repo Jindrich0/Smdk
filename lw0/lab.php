@@ -11,4 +11,4 @@ function calculator(string $line): int
     return eval("return $line;");
 }
 
-echo calculator('1+1');
+echo calculator('2/1+1*2');
