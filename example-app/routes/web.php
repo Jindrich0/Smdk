@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FilmsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('films', [FilmsController::class, 'index'])->name('films.index');
+Route::post('films', [FilmsController::class, 'store'])->name('films.store');
+Route::get('films/create', [FilmsController::class, 'create'])->name('films.create');
+Route::get('films/{films}/edit', [FilmsController::class, 'edit'])->name('films.edit');
+Route::put('films/{films}', [FilmsController::class, 'update'])->name('films.update');
+Route::delete('films/{films}', [FilmsController::class, 'destroy'])->name('films.destroy');
+Route::get('films/{films}/show', [FilmsController::class, 'show'])->name('films.show');
